@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#0B1120"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- App heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aurora_compiler"
+            android:textColor="#60A5FA"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Code. Compile. Create."
+            android:textColor="#94A3B8"
+            android:textSize="14sp" />
+
+        <!-- Language selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="PROGRAMMING LANGUAGE"
+            android:textColor="#CBD5E1"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#60A5FA"
+            android:spinnerMode="dropdown" />
+
+        <!-- Source code editor -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SOURCE CODE"
+            android:textColor="#CBD5E1"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:background="#111827">
+
+            <TextView
+                android:id="@+id/lineNumbers"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="#1F2937"
+                android:fontFamily="monospace"
+                android:gravity="top|end"
+                android:paddingTop="14dp"
+                android:paddingEnd="8dp"
+                android:text="1"
+                android:textColor="#64748B"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/codeEditor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#111827"
+                android:fontFamily="monospace"
+                android:gravity="top|start"
+                android:hint="Write your code here..."
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:padding="14dp"
+                android:scrollbars="vertical"
+                android:textColor="#E2E8F0"
+                android:textColorHint="#64748B"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <!-- Standard input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="STANDARD INPUT (OPTIONAL)"
+            android:textColor="#CBD5E1"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/stdinEditor"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:background="#111827"
+            android:fontFamily="monospace"
+            android:gravity="top|start"
+            android:hint="Enter program input..."
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textColor="#E2E8F0"
+            android:textColorHint="#64748B"
+            android:textSize="14sp" />
+
+        <!-- Run button -->
+
+        <Button
+            android:id="@+id/runButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#2563EB"
+            android:text="▶  Run Code"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/clearOutputButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#374151"
+            android:text="Clear Output"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+
+        <Button
+            android:id="@+id/resetCodeButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#374151"
+            android:text="Reset Code"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+
+        <!-- Execution status -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Ready to run"
+            android:textColor="#94A3B8"
+            android:textSize="13sp" />
+
+        <!-- Output console -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="OUTPUT CONSOLE"
+            android:textColor="#86EFAC"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="130dp"
+            android:layout_marginTop="8dp"
+            android:background="#030712"
+            android:fontFamily="monospace"
+            android:padding="14dp"
+            android:text="Your program output will appear here."
+            android:textColor="#D1FAE5"
+            android:textIsSelectable="true"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</ScrollView>
